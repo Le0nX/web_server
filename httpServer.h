@@ -22,6 +22,8 @@
 #include <regex>
 #include <boost/asio.hpp>
 
+#define BOOST_ASIO_SEPARATE_COMPILATION // ускоряем сборку.
+
 using namespace boost::asio;
 
 /**
@@ -60,8 +62,9 @@ public:
 					   std::unordered_map<std::string,
 					   	   	   	   	   	  std::function<void(std::ostream&,
 					   	   	   	   	   			  	  	  	 const request_t&,
-															 const std::smatch&)>
-										  >
+															 const std::smatch&)
+													   >
+										 >
 					  > recources;
 private:
 
