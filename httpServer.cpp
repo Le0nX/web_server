@@ -50,7 +50,7 @@ void HTTP_Server::init() {
 }
 
 void HTTP_Server::processing_request_respond(std::shared_ptr<ip::tcp::socket> sock) {
-
+	(void)sock;
 }
 
 
