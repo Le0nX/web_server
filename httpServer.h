@@ -79,9 +79,9 @@ private:
 	size_t _threads_num;
 	std::vector <std::thread> _threads;
 
-	io_service			_io_service;
-	ip::tcp::acceptor	_acceptor;
-	ip::tcp::endpoint 	_endpoint;
+	io_service			_service;		///< Сервис ввода/вывода
+	ip::tcp::acceptor	_acceptor;		///< Приемник клиентских соединений соединений
+	ip::tcp::endpoint 	_endpoint;		///< Куда подключаемся.
 };
 
 #endif /* WEB_SERVER_HTTPSERVER_H_ */
