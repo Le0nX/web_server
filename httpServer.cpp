@@ -11,7 +11,7 @@ HTTP_Server::HTTP_Server(uint32_t port, size_t threads_num=1)
 	: _threads_num(threads_num),
 	  _endpoint(ip::tcp::v4(), port),	// можно и v6
 	  _acceptor(_service, _endpoint)
-{}
+{std::cout << "Starting Server..." <<std::endl;}
 
 void HTTP_Server::accept() {
 	//Создаем новый сокет для нового подключения.
@@ -40,6 +40,7 @@ void HTTP_Server::init() {
 		});
 	}
 
+	std::cout << "...Server is Running..." <<std::endl;
 	//Главный поток
 	_service.run();
 
