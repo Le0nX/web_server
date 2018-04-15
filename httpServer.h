@@ -65,7 +65,7 @@ public:
 															 const std::smatch&)
 													   >
 										 >
-					  > recources;
+					  > resources;
 private:
 
 	void accept();
@@ -80,8 +80,9 @@ private:
 	std::vector <std::thread> _threads;
 
 	io_service			_service;		///< Сервис ввода/вывода
-	ip::tcp::acceptor	_acceptor;		///< Приемник клиентских соединений соединений
 	ip::tcp::endpoint 	_endpoint;		///< Куда подключаемся.
+	ip::tcp::acceptor	_acceptor;		///< Приемник клиентских соединений соединений
+
 };
 
 #endif /* WEB_SERVER_HTTPSERVER_H_ */
